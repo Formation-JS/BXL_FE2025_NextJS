@@ -1,3 +1,19 @@
+# Next.js - FE2025@DigitalCity
+
+## Initialisation du projet
+Pour générer un projet, utiliser la commande `npm create next-app@latest` le terminal.
+```
+√ What is your project named? ... <Projet Name>
+√ Would you like to use TypeScript? ... No / [Yes]
+√ Which linter would you like to use? » ESLint
+√ Would you like to use Tailwind CSS? ... No / [Yes]
+√ Would you like your code inside a `src/` directory? ... No / [Yes]
+√ Would you like to use App Router? (recommended) ... No / [Yes]
+√ Would you like to use Turbopack? (recommended) ... No / [Yes]
+√ Would you like to customize the import alias (`@/*` by default)? ... [No] / Yes
+Creating a new Next.js app in C:\...
+```
+
 ## Routing
 - Pour créer des routes en Next.js, vous devez ajouter des fichiers nommé "page".
 - Pour définir la route de la page, vous devez faire une structure de dossier
@@ -10,7 +26,7 @@
 /demo/:id -> Page avec un segement dynamique
 ```
 
-### Exercice
+### Exercice 01
 ```
 /product            -> Page avec la liste des produits
 /product/detail/:id -> Page avec le detail d'un produit
@@ -19,8 +35,12 @@
 /blog/:slug         -> Page d'une actu
 ```
 
+## Intéraction avec des données
 
-### Exercice 
+### Donnée static depuis un ou plusieur fichier (JSON, md, ...)
+Dans les composants (server), importer les données et utiliser les données dans les composants
+
+### Exercice 02
 Sur base du JSON `/src/data/product-data.json`, implementer le fonctionnement des routes « /product » avec les contraintes suivantes :
  
 - La page avec la liste :
