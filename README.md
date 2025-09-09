@@ -18,3 +18,20 @@
 /blog               -> Page avec les derniers actu du site
 /blog/:slug         -> Page d'une actu
 ```
+
+
+### Exercice 
+Sur base du JSON `/src/data/product-data.json`, implementer le fonctionnement des routes « /product » avec les contraintes suivantes :
+ 
+- La page avec la liste :
+  - Le nom
+  - Le prix
+  - Un icone pour le type de produit (Nourriture ou non)
+
+- La page detail : 
+  - Le nom
+  - La description
+  - Le prix (avec et sans la tva)
+  - Le type de produit
+
+_Remarque : pour la route « /product/add » faire uniquement le visuel du formulaire 😉_
