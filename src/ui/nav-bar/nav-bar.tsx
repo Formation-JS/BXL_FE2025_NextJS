@@ -3,6 +3,7 @@ import Link from "next/link.js";
 const links = [
     { href: '/', name: 'Accueil', icon: '🏡' },
     { href: '/demo', name: 'Demo', icon: '🧪' },
+    { href: '/blog', name: 'Blog', icon: '📚' }
 ];
 
 export default function NavBar() {
