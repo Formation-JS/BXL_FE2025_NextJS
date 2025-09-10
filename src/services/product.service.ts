@@ -25,6 +25,9 @@ const productService = {
 
     getMostInStock : async() : Promise<ProductList> => {
 
+        // Simulation de perte de temps (Ne pas faire ça en prod !!!)
+        await new Promise((resolve) => setTimeout(resolve, 3_000));
+
         const response : Response =await fetch('http://localhost:4224/products?_sort=stock&_order=desc') ;
 
         const data : Product[] = await response.json();
@@ -44,6 +47,10 @@ const productService = {
     },
 
     getOutOfStock: async () : Promise<ProductList> => {
+        
+        // Simulation de perte de temps (Ne pas faire ça en prod !!!)
+        await new Promise((resolve) => setTimeout(resolve, 1_000));
+
         const response : Response =await fetch('http://localhost:4224/products?stock=0');
         const data : Product[] = await response.json();
 
