@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation.js";
 import PriceStyle from '@/components/price-style/price-style';
-import productData from '@/data/product-data.json';
+import productService from "@/services/product.service";
 
 type ProductDetailPageProps = {
     params: Promise<{
@@ -11,7 +11,7 @@ type ProductDetailPageProps = {
 export default async function ProductDetailPage({ params }: ProductDetailPageProps) {
 
     const id = parseInt((await params).id);
-    const product = productData.find(p => p.id === id);
+    const product = await productService.getById(id);
 
     if (!product) {
         notFound();
