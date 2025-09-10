@@ -4,9 +4,9 @@ import productService from "@/services/product.service";
 export function ProductCountSkeleton() {
     return (
         <>
-            <h2 className="mt-3 w-48 h-4 bg-gray-200 "></h2>
-            <p className="w-24 h-4 bg-gray-200"></p>
-            <p className="w-28 h-4 bg-gray-200"></p>
+            <h2 className="mt-3 w-48 h-6 mb-1 bg-gray-200 "></h2>
+            <p className="w-24 h-5 mb-1 bg-gray-200"></p>
+            <p className="w-28 h-5 bg-gray-200"></p>
         </>
     )
 }
