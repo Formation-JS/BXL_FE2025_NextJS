@@ -7,3 +7,5 @@ export type Book = {
   author: string;
   releaseYear: number;
 };
+
+export type BookData = Omit<Book, 'id'>;

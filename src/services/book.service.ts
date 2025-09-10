@@ -1,4 +1,4 @@
-import { Book } from "@/@types/book";
+import { Book, BookData } from "@/@types/book";
 
 const bookService = {
 
@@ -25,7 +25,13 @@ const bookService = {
             nbPage: data.nbPage,
             releaseYear: data['année_de_sortie']
         };
-    }
+    },
+
+    add: async (book : BookData) : Promise<number> => {
+        
+        console.log(`Ajout du livre ${book.name} simulé !`);
+        return 42;
+    } 
 
 };
 export default bookService;
