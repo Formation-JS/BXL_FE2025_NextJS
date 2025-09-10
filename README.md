@@ -82,3 +82,10 @@ Les actions du formulaire peuvent être réalisé coté "server" grace à la dir
 
 ### Exercice 04
 Ajouter le necessaire pour permettre à l'utilisateur d'ajouter un nouveau produit depuis un formulaire dans la page "/product/add" en utilisant le service `productService.add(...)`.
+
+### Bonus
+Mettre en place une validation de donnée avec un librairie de validation :
+ - [Zod](https://zod.dev/)
+ - [Joi] (https://joi.dev/api/)
+ - [Yup](https://github.com/jquense/yup)
+ - [Superstruct](https://docs.superstructjs.org/)
