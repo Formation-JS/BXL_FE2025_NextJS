@@ -1,5 +1,6 @@
 # Next.js - FE2025@DigitalCity
 
+
 ## Initialisation du projet
 Pour générer un projet, utiliser la commande `npm create next-app@latest` le terminal.
 ```
@@ -35,6 +36,7 @@ Creating a new Next.js app in C:\...
 /blog/:slug         -> Page d'une actu
 ```
 
+
 ## Intéraction avec des données
 
 ### Donnée static depuis un ou plusieur fichier (JSON, md, ...)
@@ -55,3 +57,28 @@ Sur base du JSON `/src/data/product-data.json`, implementer le fonctionnement de
   - Le type de produit
 
 _Remarque : pour la route « /product/add » faire uniquement le visuel du formulaire 😉_
+
+
+## Données depuis une source externe (API, DB, ...)
+Pour intéragir avec un api, vous pouvez utiliser la méthode "fetch", il est conseillé de créer une "couche" de service pour isoler le code.
+
+Le service sont des méthodes asynchrone qui sont dédié au traitement des données et intéraction avec le backend. Celles-ci peuvent être utiliser dans les composant avec le mot clef "async / await"
+
+### Loading des données
+Lorsqu'un composant utilise une méthode asynchrone, si un fichier "loading" est présent, celui-ci sera utiliser durant le chargement des données.
+
+### Streaming de composant
+Il est possible de réaliser le chargement des composants en streaming à l'aide du composant "Suspense" de React.
+
+### Exercice 03
+Remplacer l'utilisation du fichier JSON par une consomation d'une Web API
+
+
+## Intéraction avec le formulaire
+Pour réaliser les interactions avec un formulaire, vous pouvez utiliser les actions de React.
+
+Le formulaire peut être éxecuter du coté "client" grace la directive `'use client;'`. \
+Les actions du formulaire peuvent être réalisé coté "server" grace à la directive `'user server;'`.
+
+### Exercice 04
+Ajouter le necessaire pour permettre à l'utilisateur d'ajouter un nouveau produit depuis un formulaire dans la page "/product/add" en utilisant le service `productService.add(...)`.
